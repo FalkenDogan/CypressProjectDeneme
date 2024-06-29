@@ -1,0 +1,44 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:open:e2e": "cypress open --e2e",
+    "cy:open:chrome": "cypress open --e2e --browser chrome",
+    "cy:open:canary": "cypress open --e2e --browser canary",
+    "cy:open:firefox": "cypress open --e2e --browser firefox",
+    "cy:open:edge": "cypress open --e2e --browser edge",
+    "cy:open:electron": "cypress open --e2e --browser electron",
+    "cy:run:headed": "cypress run --headed",
+    "cy:run:headless": "cypress run --headless",
+    "cy:run:record": "cypress run --record ",
+    "cy:run:dev": "cypress run --env='dev'",
+    "cy:run:staging": "cypress run --env='staging' ",
+    "cy:run:preprod": "cypress run --env='prepord'",
+    "cy:info": "cypress info",
+    "cy:version": "cypress version",
+    "cy:cache:list": "cypress cache list",
+    "cy:verify": "cypress verify",
+    "cy:e2e:firstFolder": "cypress run --spec 'cypress/e2e/1-getting-started/'",
+    "cy:e2e:cypress-dersleri": "cypress run --spec 'cypress/e2e/cypress-dersleri/' --browser chrome --headed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/grep": "^4.0.1",
+    "cypress": "^13.9.0",
+    "cypress-delete-downloads-folder": "^0.0.5",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-if": "^1.12.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress-real-events": "^1.12.0"
+  }
+}

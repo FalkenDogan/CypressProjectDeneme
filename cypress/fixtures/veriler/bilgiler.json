@@ -1,0 +1,18 @@
+[
+  {
+    "veri1": {
+      "id": "1",
+      "isim": "test",
+      "ulke": "Türkiye",
+      "plan": "denemePlani",
+      "status": "aktif"
+    },
+    "veri2": {
+      "id": "2",
+      "isim": "example",
+      "ulke": "Almanya",
+      "plan": "denemePlani2",
+      "status": "deaktif"
+    }
+  }
+]

@@ -1,0 +1,21 @@
+CYPRESS'DE XPATH KULLANIMI
+
+Cypress -xpath
+cypress'e xpath yüklemek için terminale :
+npm install -D cypress-xpath 
+yazıyoruz.
+yükleme işlemi tamamlandıktan sonra support clasörü içindeki e2e.js dosyasına aşağıdaki satırı ekliyoruz.
+require('cypress-xpath')
+eklenip eklenmediğini package.json'dan kontrol edebiliriz
+
+eger xpath kullanılacaksa cy.get kullanılmaz. locate cy.xpath'in içine yazılır.
+cy.get(locate).find(locate).click() yazımı xpath'de aşağıdaki gibidir
+cy.xpath(locate).xpath(locate).click()
+
+
+bazı sitelerde şu hata gelirse aşağıdaki satırı it'in üstüne yapıştır
+hata/exception : uncaught:exception
+
+cy.on("uncaught:exception", (err, runnable) => {
+      return false;
+    });

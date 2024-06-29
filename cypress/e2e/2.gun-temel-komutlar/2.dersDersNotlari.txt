@@ -1,0 +1,280 @@
+Describe : Test süitinin adı
+it : test adımlarının yapıldığı method blockları
+
+Gezinme :
+cy.visit() : belirli bir url'ye gider
+cy.url() : geçerli url'yi alır.
+cy.go() : geri ve iler gitmek için kullanılır (direction), (direction, option) (1), (-1), ('back'), ('forward')
+
+Temel Seçiciler:
+cy.get(): elementi almak için kullanılır. (#userName)
+cy.contains(): hem assertion'da hem locate alırken kullanılır. cy.(.name).contains('Login'),  Login text'ini içeren ve class'ı name olan locate bul
+cy.find: Bir element içinde alt elementleri bulmak için kullanılır. cy.(.name).contains('Login').find('li')
+
+Element İşlemleri
+.click(): tıkla
+.type(): input, textbox alanına metin gönder
+.clear(): input, textBox alanını temizle
+
+Assertion
+.should(): doğrulama yapar. cy.(.name).contains('Login').find('li').should('eq', 'hallo world!')
+
+Bekleme-Wait
+Cypress'in otomatik beklemesi vardır. Ancak daha uzun bekletmek için
+cy.wait(): 
+
+ÖNEMLİ BAZI KOMUTLAR
+cy.title(): sayfa başlığını alır
+cy.viewport(): sayfanın görüntülenme alanını ayarlamak için kullanılır.cy.viewport(1000, 1200), ('iphone-6)
+cy.log(): Konsola bir ileti yazmak için kullanılır. konsol log gibi
+cy.screenshot(): Ekran görüntüsü alır
+.only, .skip : sadece belirli süit veya testleri çalıştırmak veya geçirmemek için kullanılır. describe ve it'e ekleniyor.
+
+
+
+
+
+
+
+Cypress basic commands List
+
+and
+It is used to create an assertion and is an alias of .should ().
+
+The usage is as follows −
+
+//element is visible & enabled
+cy.get('#txt').should('be.visible').and('be.enabled')
+//element is checked
+cy.contains('Subject').and('be.checked')
+
+as
+It provides an alias for later usage.
+
+The usage is as follows −
+
+//alias element as parent
+cy.get('#txt').find('li').first().as('parent')
+blur
+It blurs an element in focus.
+
+The usage is as follows −
+
+//blur input
+cy.get('#txt'). type('abc').blur()
+
+check
+It checks radio buttons or checkboxes and is applied to elements having input tags.
+
+The usage is as follows −
+
+//checks element having class attribute chkbox
+cy.get('.chkbox').check()
+children
+It obtains the sub elements of an element.
+
+The usage is as follows −
+
+//obtains children of element n
+cy.get('n').children()
+
+clear
+It removes the value from textarea or input.
+
+The usage is as follows −
+
+//removes input abc
+cy.get('#txt'). type('abc').clear()
+
+clearCookie
+It removes a particular browser cookie.
+
+The usage is as follows −
+
+//clear abc cookie
+cy.clearCookie('abc')
+clearCookies
+It removes the browser cookies from an existing domain and subdomain.
+
+The usage is as follows −
+
+//clear all cookies
+cy.clearCookies()
+
+clearLocalStorage
+It removes the local Storage data from an existing domain and subdomain.
+
+The usage is as follows −
+
+//clear all local storage
+cy. clearLocalStorage ()
+
+click
+It clicks an element in Document Object Model (DOM).
+
+The usage is as follows −
+
+//click on element with id txt
+cy.get('#txt').click()
+contains
+It obtains an element having a specific text. The element can have more than the text and still match.
+
+The usage is as follows −
+
+//returns element in #txt having Tutor text
+cy.get('#txt').contains('Tutor')
+dblclick
+It double-clicks an element in Document Object Model (DOM).
+
+The usage is as follows −
+
+//double clicks element with id txt
+cy.get('#txt').dblclick()
+debug
+It fixes a debugger and log values are returned by prior command.
+
+The usage is as follows −
+
+//pause to debug at start of command
+cy.get('#txt').debug()
+document
+It obtains window.document on the active page.
+
+The usage is as follows −
+
+cy.document()
+each
+It iterates through an array having the property length.
+
+The usage is as follows −
+
+//iterate through individual li
+cy.get('li').each(() => {...})
+end
+It ends a command chain.
+
+The usage is as follows −
+
+//obtain null instead of input
+cy.contains('input').end()
+eq
+It refers to an element at a particular index in an array of elements.
+
+The usage is as follows −
+
+//obtain third td in tr
+cy.get('tr>td').eq(2)
+exec
+It runs a system command.
+
+The usage is as follows −
+
+cy.exec('npm init')
+find
+It obtains the descendant elements of a particular locator.
+
+The usage is as follows −
+
+//obtain td from tr
+cy.get('tr').find('td')
+first
+It obtains the first element from a group of elements.
+
+The usage is as follows −
+
+//obtain first td in tr
+cy.get('tr>td').first()
+get
+It obtains single or multiple elements by locator.
+
+The usage is as follows −
+
+//obtain td from tr
+find
+It obtains the descendant elements of a particular locator.
+
+The usage is as follows −
+
+//obtain all td from tr in list
+cy.get('tr>td')
+getCookie
+It obtains a particular browser cookie by its name.
+
+The usage is as follows −
+
+cy.getCookie('abc')
+getCookies
+It obtains all the cookies
+
+The usage is as follows −
+
+cy.getCookies()
+go
+It moves forward or backward to the next or previous URL in browser history.
+
+The usage is as follows −
+
+//like clicking back button
+cy.go('back')
+//like clicking forward button
+cy.go('forward')
+visit
+It launches an URL.
+
+The usage is as follows −
+
+cy.visit('https://www.tutorialspoint.com/index.htm')
+next
+It obtains the immediate sibling of an element within a group of elements in Document Object Model (DOM).
+
+The usage is as follows −
+
+//gives the following link in element l.
+cy.get('l a:first').next()
+parent
+It obtains the parent element from a group of elements in DOM.
+
+The usage is as follows −
+
+//get parent of element with class h
+cy.get('.h').parent()
+should
+It is used to create an assertion and is an alias of .and ().
+
+The usage is as follows −
+
+//assert element is visible & enabled
+cy.get('#txt').should('be.visible').and('be.enabled')
+wait
+Wait for a certain time in milliseconds or for an aliased element prior to moving the following step.
+
+The usage is as follows −
+
+cy.wait(1000)
+title
+It obtains the document.title of the active page.
+
+The usage is as follows −
+
+cy.title()
+viewport
+It manages the dimension and positioning of the screen.
+
+The usage is as follows −
+
+// viewport to 100px and 500px
+cy.viewport(100, 500)
+log
+It prints the messages to the Command Log.
+
+The usage is as follows −
+
+cy.log('Cypress logging ')
+reload
+It is used for page reloading.
+
+The usage is as follows −
+
+cy.reload()
+
+***********-*--------

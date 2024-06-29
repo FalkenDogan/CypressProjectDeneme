@@ -1,0 +1,163 @@
+{
+  "title": "UygulamaTestKaydi",
+  "steps": [
+    {
+      "type": "setViewport",
+      "width": 991,
+      "height": 919,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "isLandscape": false
+    },
+    {
+      "type": "navigate",
+      "url": "https://practice.expandtesting.com/",
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://practice.expandtesting.com/",
+          "title": "Automation Testing Practice Website for UI and API"
+        }
+      ]
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Search an example..."],
+        ["#search-input"],
+        ["xpath///*[@id=\"search-input\"]"],
+        ["pierce/#search-input"]
+      ],
+      "offsetY": 22.109375,
+      "offsetX": 181.171875
+    },
+    {
+      "type": "change",
+      "value": "web inputs",
+      "selectors": [
+        ["aria/Search an example..."],
+        ["#search-input"],
+        ["xpath///*[@id=\"search-input\"]"],
+        ["pierce/#search-input"]
+      ],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Search"],
+        ["#search-button"],
+        ["xpath///*[@id=\"search-button\"]"],
+        ["pierce/#search-button"],
+        ["text/Search"]
+      ],
+      "offsetY": 26.109375,
+      "offsetX": 38.359375
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Web inputs[role=\"link\"]"],
+        ["main a"],
+        ["xpath///*[@id=\"examples\"]/div/div/div/div/h3/a"],
+        ["pierce/main a"],
+        ["text/Web inputs"]
+      ],
+      "offsetY": 14.71875,
+      "offsetX": 40,
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://practice.expandtesting.com/inputs",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Display Inputs"],
+        ["#btn-display-inputs"],
+        ["xpath///*[@id=\"btn-display-inputs\"]"],
+        ["pierce/#btn-display-inputs"],
+        ["text/Display Inputs"]
+      ],
+      "offsetY": 17.5,
+      "offsetX": 74
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Input: Number"],
+        ["#input-number"],
+        ["xpath///*[@id=\"input-number\"]"],
+        ["pierce/#input-number"]
+      ],
+      "offsetY": 13.5,
+      "offsetX": 71
+    },
+    {
+      "type": "change",
+      "value": "5",
+      "selectors": [
+        ["aria/Input: Number"],
+        ["#input-number"],
+        ["xpath///*[@id=\"input-number\"]"],
+        ["pierce/#input-number"]
+      ],
+      "target": "main"
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Display Inputs"],
+        ["#btn-display-inputs"],
+        ["xpath///*[@id=\"btn-display-inputs\"]"],
+        ["pierce/#btn-display-inputs"],
+        ["text/Display Inputs"]
+      ],
+      "offsetY": 20.5,
+      "offsetX": 67
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Clear Inputs"],
+        ["#btn-clear-inputs"],
+        ["xpath///*[@id=\"btn-clear-inputs\"]"],
+        ["pierce/#btn-clear-inputs"],
+        ["text/Clear Inputs"]
+      ],
+      "offsetY": 22.5,
+      "offsetX": 62.578125
+    },
+    {
+      "type": "click",
+      "target": "main",
+      "selectors": [
+        ["aria/Home"],
+        ["main a"],
+        ["xpath//html/body/main/div/div/nav/ol/li[1]/a"],
+        ["pierce/main a"],
+        ["text/Home"]
+      ],
+      "offsetY": 9.5,
+      "offsetX": 26,
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://practice.expandtesting.com/",
+          "title": ""
+        }
+      ]
+    }
+  ]
+}

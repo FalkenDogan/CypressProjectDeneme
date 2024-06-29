@@ -1,0 +1,8 @@
+video kayıtlarında 18.05.2014 tarihli video
+
+
+chrome recorder paketinin yuklenmesi icin
+npm install -g @cypress/chrome-recorder
+chrome uzerinden yapilan kayit isleminin json formatinda export edilmesi ve bilgisayarimiza indirilmesi gerekiyor.
+Bilgisayrimizda indirme isleminden sonra terminalde convert islemini su komut ile yapiyoruz:
+npx @cypress/chrome-recorder ~/Downloads/dosyaAdi.json -o=cypress/e2e/cypress-dersleri

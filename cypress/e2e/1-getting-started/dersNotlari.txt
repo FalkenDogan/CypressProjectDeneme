@@ -1,0 +1,28 @@
+Kurulum oncesi Gereksinimler
+1. Nodejs
+2. IDE (Tercihen VSCode :))
+3. Tarayici
+Terminal islemleri
+1. node -v (node versiyon kontrolu)
+2. npm init (package.json olusturmak icin)
+3. npm install cypress (cypress'i kurmak icin)
+4. npx cypress open YADA node ./node_modules/cypress/bin/cypress open (cypress'i baslatmak icin)
+5. npx cypress open --e2e (E2E Testing'i acmak icin)
+6. npx cypress open --e2e --browser chrome (E2E Testing'i baslatip, chrome tarayicisini calistirmak icin)
+7. npx cypress run (Terminal'de butun testleri run etmek icin, arayuzu kullanmadan)
+VSCode Extensions
+1. Add.only
+2. ES6 Mocha Snippets
+3. vscode-icons
+4. bracket pair colorizer
+spec, js, ts uzantili dosyalari test runner'da goruntulemek ve calistirmak icin
+cypress.config.js dosyasi icerisinde bulunan e2e{} icine
+specPattern: 'cypress/e2e/**/*.{js, jsx, ts, tsx}' eklenmeli
+
+Klasörler
+1-e2e klasörü : koşturulacak bütün testler buraya yazılacak. Test dosyası .cy.js uzantısı ile bitecek.
+2- fixtrue klasörü : Burada datalar ve veriler bulunacak. Javadaki page'ler veya pojo gibi kullanılacak
+3- Support: burada iki alt klasör var. 
+    e2e.js. Burada pluginsler, paketler yüklediğimlizde import etmemize yarayacak
+    commands.js reusable method deposu
+
